@@ -27,3 +27,51 @@ interface Bottle{
 }
 
 identityFour<Bottle>({brand:"coca-cola",type:123});
+
+
+
+
+function getSearchProducts<T> (products :T[]):T{
+    const myIndex = 3;
+    return products[myIndex];
+}
+
+//same above code using arrow function
+const getMoreSearchProducts = <T,>(products: T[]):T => {
+    const myIndex =3;
+    return products[myIndex];
+
+}
+
+interface Database{
+    connection:string,
+    username:string,
+    password:string
+}
+
+function anotherFunction<T,U extends Database>(valOne:T,valTwo:U):object{
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+// anotherFunction(5,{connection:"",username:"",password:""})
+
+interface Quiz{
+    name:string,
+    type:string,
+}
+
+interface Course {
+    name:string,
+    author:string,
+    subjects:string,
+}
+class Sellable<T>{
+    public cart:T[]=[]
+
+    addToCart(product : T){
+        this.cart.push(product)
+    }
+}

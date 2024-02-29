@@ -17,3 +17,26 @@ function identityFour(val) {
     return val;
 }
 identityFour({ brand: "coca-cola", type: 123 });
+function getSearchProducts(products) {
+    const myIndex = 3;
+    return products[myIndex];
+}
+//same above code using arrow function
+const getMoreSearchProducts = (products) => {
+    const myIndex = 3;
+    return products[myIndex];
+};
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
